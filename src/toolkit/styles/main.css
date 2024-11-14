@@ -1,0 +1,113 @@
+@import url("utils/font.css");
+@import url("utils/header.css");
+@import url("component/login.css");
+@import url("component/filter-box.css");
+@import url("component/notesfeed.css");
+@import url("component/color-picker.css");
+
+.page-footer {
+  background: var(--COLOR-PRIMARY-XLIGHT);
+}
+
+.dark .page-footer {
+  background: transparent;
+}
+
+.tag-selector {
+  border: none;
+  outline: none;
+}
+
+.label-text,
+.dark .label-text {
+  color: white;
+  border-radius: 4px;
+}
+
+.w-5rm {
+  width: 5rem;
+}
+
+.modal {
+  overflow-y: scroll;
+  height: 55vh;
+  width: 90%;
+}
+
+.modal-close-btn {
+  position: absolute;
+  left: 90%;
+  top: 5%;
+}
+
+.show-toast {
+  z-index: 1;
+}
+
+.blue-text {
+  color: var(--BLUE);
+}
+
+.yellow-text {
+  color: var(--YELLOW);
+}
+
+.p-t-5 {
+  padding-top: 5rem;
+}
+
+.flex-end {
+  align-self: end;
+  justify-self: end;
+}
+
+.heart-btn {
+  position: absolute;
+  left: 85%;
+  top: 2%;
+  color: var(--COLOR-COMPLEMENTARY-DARK);
+  background: transparent;
+}
+
+.card-img {
+  height: 30vh;
+}
+
+.games-grid {
+  justify-items: center;
+  background: transparent;
+}
+
+.dark .footer-icon {
+  color: white;
+}
+
+.footer-icon:hover {
+  color: var(--COLOR-COMPLEMENTARY);
+}
+
+.m-b-2 {
+  margin-bottom: 2rem;
+}
+
+.nav-icon-btn:last-child {
+  margin-right: 3rem;
+}
+
+/* override mockman styles */
+.title {
+  border-bottom: none;
+  width: initial;
+}
+
+@media screen and (max-width: 600px) {
+  .field {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .page-footer {
+    flex-wrap: wrap;
+  }
+}

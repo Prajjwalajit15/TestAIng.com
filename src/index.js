@@ -1,27 +1,39 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import './index.css'
-import App from './App'
-import reportWebVitals from './reportWebVitals'
-import CssBaseline from '@material-ui/core/CssBaseline'
-import { ThemeProvider } from '@material-ui/core/styles'
-import theme from './theme'
-import { Provider } from 'react-redux'
-import store from 'redux/store'
+import React from "react";
+import ReactDOM from "react-dom";
+import { BrowserRouter as Router } from "react-router-dom";
+import "./index.css";
+import App from "./App";
+import { makeServer } from "./server";
+import { NoteProvider } from "contexts/NoteContext";
+import { ModalProvider } from "contexts/ModelContext";
+import { UserProvider } from "contexts/UserContext";
+import { ToastProvider } from "contexts/ToastContext";
+import { SidebarProvider } from "contexts/SidebarContext";
+import { FilterProvider } from "contexts/FilterContext";
+import { AuthProvider } from "contexts/AuthContext";
+
+// Call make Server
+makeServer();
 
 ReactDOM.render(
   <React.StrictMode>
-    <CssBaseline />
-    <ThemeProvider theme={theme}>
-      <Provider store={store}>
-        <App />
-      </Provider>
-    </ThemeProvider>
+    <Router>
+      <AuthProvider>
+        <ToastProvider>
+          <FilterProvider>
+            <UserProvider>
+              <NoteProvider>
+                <ModalProvider>
+                  <SidebarProvider>
+                    <App />
+                  </SidebarProvider>
+                </ModalProvider>
+              </NoteProvider>
+            </UserProvider>
+          </FilterProvider>
+        </ToastProvider>
+      </AuthProvider>
+    </Router>
   </React.StrictMode>,
-  document.getElementById('root')
-)
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals()
+  document.getElementById("root")
+);
