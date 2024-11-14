@@ -1,25 +1,44 @@
-# [NotesFeed](https://notesfeed.netlify.app) - Note Taking App
+Manage your work, home, personal tasks with notes app. Add ability to add, edit, delete, and mark them as completed. Additional features include searching, filtering and visualizing completion progress.
 
-[**NotesFeed**](https://notesfeed.netlify.app) is a note making app made using React JS. Now you can manage your daily tasks & workflow in modern way to boost your efficiency without any effort. This app display information with integrated light☀️/dark🌙 mode.
+### :point_right: [DEMO](https://zipzip1312.github.io/React-Notes-App/) :rocket:
 
-## Preview☀️/🌙
+:star: Original project
+[bigsondev.com](https://bigsondev.com/projects/notes-app-project/)
 
-![notesfeed](src/toolkit/assets/notesfeed.gif)
+:star: Designed by
+[Milena Ulman](https://www.behance.net/milenaulman)
 
-## Features:
+## :hammer: Technologies & Tools
 
-- User can add new note with respective title, description, note-color & label.
-- Edit note's data.
-- Filter based on sort by date and label.
-- Search for a particular note.
-- Archive & restore note.
-- Delete note in seperated folder.
-- Sign in/Sign Up using mock backend (MockBee)
+- React
+- Redux ([Redux Toolkit](https://redux-toolkit.js.org/))
+- Material UI
+- Material UI Icons
+- LocalStorage
+- Web worker
 
-## Technologies & Concepts used
+## :trophy: Features
 
-- React JS with useReducer + useContext
-- JSX
-- HTML/CSS
+- Users can search and filter notes.
+- Users can add new notes.
+- When adding a new note, users can fill title, description, and category. The date is created under the hood using the current time.
+- Users can see created, colored notes sorted by date as well as an empty UI with illustration when there are no notes or couldn't be found.
+- Users can see how many notes are completed including the visual progression indicator.
+- Users can mark notes as completed, edit, and delete them.
+- Completed notes have strikethrough text and gray background. Also, they are moved into the end.
+- When editing notes, the date of note also updates all together with other fields.
+- Confirmation pops up when deleting notes.
 
-To know about the styled components, their variations, read the [inNotion UI Documentation](https://innotion-ui.netlify.app/).
+## :gem: Additional Features
+
+- Notes data stored in localStorage
+- Installable (PWA)
+- Optimized for mobile
+- Ability to mock notes if notes list is empty
+
+## :wrench: Project setup
+
+```bash
+# In the project directory run:
+npm i && npm start
+```
